@@ -1,0 +1,83 @@
+1. What is Python? Explain in your own words.
+--> the python is a programming language which is used to interact with computer and used to create high level software & web application. 
+
+2. Who developed Python and in which year was it released?
+--> the python was developed by Guido van Rossum and it was released in 1991. 
+
+3. Why is Python called a high-level programming language?
+
+4. What are the features of Python that make it popular? (Write any 4)
+--> i)high-level programming language
+   ii)easy to learn and code
+  iii)python is a simple programming languge
+
+5. What is a programming language? Give examples.
+--> the programming language is used to interact with computers
+
+6. What is a computer? Write a short definition in your own words.
+--> the computer is a operating machine which is used for technology & educational research.
+
+7. What do you mean by “variable” in Python? Give an example.
+--> name = "Naveen"
+    print(name)
+
+8. What is the use of int data type in Python? Explain with an example.
+--> int data type is only used for numbers in python
+
+    age = 21
+    print(age)
+
+9. What is the difference between int and float data types?
+--> int is characters and float is return in point value
+
+10. Write one example of:
+
+a) int
+--> age = 21
+
+b) float
+--> num = 90.78
+c) str
+--> name = "naveen"
+
+11. What is the syntax to declare a variable in Python? Give 2 examples.
+--> variablename = value
+
+12. What is the use of type() function in Python? Show with code and output.
+--> type() is a pre-defined function in python is used to return a variable type of value
+
+13. Write the output of the following code:
+
+x = 3.14
+print(type(x))
+<class 'float'>
+
+14. What are identifiers in Python? Give 3 valid and 3 invalid identifiers.
+
+15. What are the rules for writing identifiers in Python? (Write any 4)
+--> 1) we cannot use python keywords as indentifiers
+    2) the python indenfiers are a case sensitive
+    3) the identifiers ca contain letters, digits & underscores
+    4) 
+
+16. What is the difference between keyword and identifier in Python?
+-->Keywords are reserved words that have predefined.
+Identifiers are names given by the programmer to identify like variables, functions, classes,orobjects in a Python program.
+
+17. Why is Python called an interpreted language?
+-->it uses an interpreter to execute code directly, line by line, without requiring a separate compilation step before running
+
+18. Write a short note on Python history.
+-->the python was developed by Guido van Rossum and it was released in 1991.and the python is a high level interpreter language 
+
+19. How do you take input from a user in Python? Show with example.
+--> name = input("Enter Your Name :")
+    marks = eval(input("Enter Your Marks :"))
+    print("You Entered name is",name\n"You Entered Marks is",marks)
+
+20. What are data types in Python? List at least 5 basic data types with example.
+--> int
+    string
+    float
+    bool
+    complex

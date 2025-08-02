@@ -1,0 +1,93 @@
+fees_structure={'python':40000,'data science':60000,'java':30000,'aws':20000,'angular':10000,'frontend':30000}
+student_data={101:{'name':'vaibhav','email':'vaibhav@gmail.com','course':'python','tfee':40000,'pfee':20000,'rfee':20000}}
+print("Welcome The Kiran Academy".center(100,'-'))
+while True:
+    print('''
+    1.Add student
+    2.Record
+    3.Update data
+    4.Delete
+    5.Filter
+    6.search
+    7.logout
+    ''')
+    ch=int(input("enter your choice: "))
+    if ch==1:
+        name=input("Name: ")
+        email=input("Email: ")
+        course=input("Course: ")    
+        while course not in fees_structure:
+            course=input("please enter anothor Course: ") 
+        cfee=fees_structure[course]
+        dis=eval(input("dis"))
+        tfee=cfee-cfee*dis/100
+        pfee=eval(input('pfee: '))
+        rfee=tfee-pfee
+        reg=101+len(student_data)
+        #var[key]=value
+        student_data[reg]={'name':name,'email':email,'course':course,'tfee':tfee,'pfee':pfee,'rfee':rfee}
+        print(student_data)
+
+    elif ch==2:
+        print('-'*136)
+        print('|{:^10}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|'.format('RegNo','Name','Email','Course','Tfee','Pfee','Rfee'))
+        print('-'*136)
+        if student_data:
+            for reg in student_data:
+                print('|{:^10}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|'.format(reg,student_data[reg]['name'],student_data[reg]['email'],student_data[reg]['course'],student_data[reg]['tfee'],student_data[reg]['pfee'],student_data[reg]['rfee']))
+                print('-'*136)
+        else:
+            print("N D A")
+
+
+    elif ch==3:
+        reg=eval(input("reg: "))
+        print('''
+        1.Name
+        2.email
+        ''')
+        ch=int(input("enter your choice: "))
+        if ch==1:
+            uname=input('Name :' )
+            #var[key]=uvalue
+            student_data[reg]['name']=uname
+            print("Updated successfully")
+        elif ch==2:
+            uemail=input("Email: ")
+            student_data[reg]['email']=uemail
+            print("Updated successfully")
+        else:
+            print("invalid input")
+
+    elif ch==4:
+        reg=int(input("reg: "))
+        if reg in student_data:
+            student_data.pop(reg)
+            print("deleted successfully")
+        else:
+            print('invalid reg number')
+    elif ch==5:
+        print('''
+        1.course
+        ''')
+        c=input("enter course name: ")
+        print('-'*136)
+        print('|{:^10}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|'.format('RegNo','Name','Email','Course','Tfee','Pfee','Rfee'))
+        print('-'*136)
+        if student_data:
+            for reg in student_data:
+                if student_data[reg]['course']==c:
+                    print('|{:^10}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|{:^20}|'.format(reg,student_data[reg]['name'],student_data[reg]['email'],student_data[reg]['course'],student_data[reg]['tfee'],student_data[reg]['pfee'],student_data[reg]['rfee']))
+                    print('-'*136)
+        else:
+            print("N D A")
+
+    elif ch==6:
+        pass
+    elif ch==7:
+        break
+    else:
+        print("invalid input")
+
+
+

@@ -1,0 +1,115 @@
+Problem Statement: Library Management System (LMS)
+Objective:
+Create a menu-driven Library Management System using Python that allows library staff to log in, manage books, register members, issue and return books, and maintain all relevant data. The system should be simple but modular and scalable.
+
+User Roles:
+Admin (Librarian)
+
+Username/Password-based login system
+
+Only after login can operations be performed
+
+Logout to end session
+
+Modules and Functional Requirements:
+1. Login System
+Predefined credentials for the admin.
+
+Validate username and password before giving access.
+
+Retry option for wrong login attempts (max 3 tries).
+
+2. Book Management
+Add Book
+
+Book ID (unique), Title, Author, Category, Quantity
+
+View All Books
+
+Display all books in tabular format
+
+Update Book Info
+
+Update book title, author, or quantity using Book ID
+
+Delete Book
+
+Remove a book by its Book ID
+
+Search Book
+
+By title or author name
+
+
+3. Member Management
+Register Member
+
+Member ID (auto-generated), Name, Email, Mobile
+
+View All Members
+
+Display member details
+
+Update Member Info
+
+Edit name or contact info
+
+Delete Member
+
+Remove a member by Member ID
+
+4. Issue and Return System
+Issue Book
+
+Input: Member ID and Book ID
+
+Check book availability
+
+Update quantity and maintain issue record with date
+
+Return Book
+
+Input: Member ID and Book ID
+
+Update quantity
+
+Remove from issue record
+
+View Issued Books
+
+List all issued books with member name and issue date
+
+5. Logout System
+End the admin session
+
+Return to login screen
+
+Data Structures:
+Use Python dictionaries or lists of dictionaries to store:
+
+Book Records
+
+Member Records
+
+Issue Records
+
+Admin Credentials Example:
+
+admin_credentials = {
+    'admin': 'admin123'
+}
+Sample Data Structures:
+Book Example:
+
+books = {
+    'B101': {'title': 'Python Basics', 'author': 'John Doe', 'category': 'Programming', 'quantity': 5}
+}
+Member Example:
+
+members = {
+    'M101': {'name': 'Alice', 'email': 'alice@example.com', 'mobile': '9876543210'}
+}
+Issue Record Example:
+issued_books = [
+    {'member_id': 'M101', 'book_id': 'B101', 'issue_date': '2025-07-28'}
+]
